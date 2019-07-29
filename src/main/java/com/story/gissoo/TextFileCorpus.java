@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -18,30 +17,43 @@ import java.util.regex.Pattern;
  */
 public class TextFileCorpus extends Corpus {
 
-    public TextFileCorpus(String idAccessType, String AccessDetail) {
-        super("FILE_PATH", AccessDetail);
+    /**
+     *
+     * @param accessType
+     * @param accessDetail
+     */
+    public TextFileCorpus(KB_AV_ACCESS_TYPE accessType, String accessDetail) {
+        super(accessType, accessDetail);
     }
 
-    public String getString() throws Exception {
-        BufferedReader reader = new BufferedReader(new FileReader(this.accessDetail));
-        String line = null;
-        StringBuilder stringBuilder = new StringBuilder();
-        String ls = System.getProperty("line.separator");
-
+    /**
+     *
+     * @return
+     */
+    public String getString() {
         try {
+            BufferedReader reader = new BufferedReader(new FileReader(this.accessDetail));
+            String line = null;
+            StringBuilder stringBuilder = new StringBuilder();
+            String ls = System.getProperty("line.separator");
+
             while ((line = reader.readLine()) != null) {
                 stringBuilder.append(line);
                 stringBuilder.append(ls);
             }
+            reader.close();
             return stringBuilder.toString();
         } catch (Exception e) {
             System.out.println(e.getMessage());
-        } finally {
-            reader.close();
         }
         return null;
     }
 
+    /**
+     *
+     * @param sentencesNum
+     * @return
+     */
     public ArrayList<String> getRandomSentences(int sentencesNum) {
         ArrayList<String> sentences = new ArrayList<String>();
         try {
@@ -72,6 +84,45 @@ public class TextFileCorpus extends Corpus {
         return sentences;
     }
 
+    /**
+     * Return random sentences containing given words.
+     *
+     * @param words
+     * @return
+     */
+    public ArrayList<String> getRandomSentencesContainWords(ArrayList<String> words) {
+        int countWords = words.size();
+        ArrayList<String> selectedSentences = new ArrayList<String>();
+
+        int whileCounter = 1;
+        int stepSentenceSampleSize = countWords;
+        int sentenceSizeOfCorpus = this.getNumOfSentences();
+
+        do {
+            //Prevent to seach in more than avalaible sentences in the corpus
+            if (stepSentenceSampleSize < sentenceSizeOfCorpus) {
+                ArrayList<String> newSentences = this.getRandomSentences(stepSentenceSampleSize);
+                for (String sentence : newSentences) {
+                    for (String word : words) {
+                        if (sentence.toLowerCase().matches(".*\\b" + word.toLowerCase() + "\\b.*")) {
+                            selectedSentences.add(sentence);
+                            words.remove(word);
+                            break;
+                        }
+                    }
+                }
+                //little by little make the sample size bigger
+                stepSentenceSampleSize += stepSentenceSampleSize;
+            }
+        } while (words.size() > 0);
+
+        return selectedSentences;
+    }
+
+    /**
+     *
+     * @return
+     */
     public int getNumOfSentences() {
         int sentenceCount = 0;
         try {
@@ -133,4 +184,15 @@ public class TextFileCorpus extends Corpus {
         }
         return contains;
     }
+
+    @Override
+    public KBPiece getARandomKBPiece(AvKBPieces aKB) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public ArrayList<KBPiece> getRandomKBPieces(int sampleSize) {
+        return null;
+    }
+
 }

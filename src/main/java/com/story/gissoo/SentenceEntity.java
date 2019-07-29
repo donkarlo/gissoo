@@ -4,6 +4,6 @@ package com.story.gissoo;
  *
  * @author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
  */
-public class SentenceEntity extends Entity{
-    
+public class SentenceEntity extends Entity {
+
 }

@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author Mohammad Rahmani
  */
-public class Corpora extends KnowledgeBases{
+public class Corpora extends KBs{
 
     /**
      * The array of existing corpus

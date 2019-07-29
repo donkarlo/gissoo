@@ -1,6 +1,6 @@
 package com.story.gissoo;
 
-import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,11 +18,17 @@ public class Main {
             int crpSz = Config.getInst().getTextFileCorpora().getCorpusArray().size();
             if (crpSz == 1) {
                 TextFileCorpus onlyCorpus = Config.getInst().getTextFileCorpora().getCorpusArray().get(0);
-                if (onlyCorpus.getIdAccessType() == "FILE_PATH") {
-                    Main.genStgy = new CmuMoviePlotRandomSentenceFromTextCorpusGenStgy(onlyCorpus, 3);
+                if (onlyCorpus.getAccessType() == KB_AV_ACCESS_TYPE.FILE_PATH) {
+//                    Main.genStgy = new RandomSentencesFromCorpusGenStgy(onlyCorpus, 10);
+                    ArrayList<String> words = new ArrayList<String>();
+                    words.add("evil");
+                    words.add("angel");
+                    words.add("idol");
+                    words.add("god");
+                    Main.genStgy = new RandomSentencesOfWordsFromCorpusGenStgy(onlyCorpus, words);
                 }
             }
         }
-        System.out.println(Main.genStgy.getStringStory());
+        Main.genStgy.printlnSentences();
     }
 }

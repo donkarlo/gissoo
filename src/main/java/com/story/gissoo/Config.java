@@ -15,7 +15,7 @@ public class Config {
     private Config() {
         this.textFileCorpora = new TextFileCorpora();
         
-        TextFileCorpus textFileCorpus = new TextFileCorpus("FILE_PATH","data/corpora/cmu-movie-summary-corpus-plot-summaries.txt");
+        TextFileCorpus textFileCorpus = new CmuMoviePlotCorpus();
         this.textFileCorpora.addCorpus(textFileCorpus);
     }
 
