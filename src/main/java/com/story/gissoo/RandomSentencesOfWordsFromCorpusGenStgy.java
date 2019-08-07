@@ -32,7 +32,7 @@ public class RandomSentencesOfWordsFromCorpusGenStgy extends GenStgy {
      * @return
      */
     public ArrayList<String> getSentences() {
-        this.sentences = this.textFileCorpus.getRandomSentencesContainWords(this.words);
+        this.sentences = this.textFileCorpus.getRandomSentencesContainingWords(this.words);
         return this.sentences;
     }
 }

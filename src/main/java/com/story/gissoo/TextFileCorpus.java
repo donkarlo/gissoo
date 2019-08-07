@@ -51,16 +51,16 @@ public class TextFileCorpus extends Corpus {
 
     /**
      *
-     * @param sentencesNum
+     * @param sampleSize
      * @return
      */
-    public ArrayList<String> getRandomSentences(int sentencesNum) {
-        ArrayList<String> sentences = new ArrayList<String>();
+    public ArrayList<String> getRandomSentences(int sampleSize) {
+        ArrayList<String> generatedSentences = new ArrayList<String>();
         try {
             File file = new File(this.accessDetail);
             int numOfCorpusSentences = this.getNumOfSentences();
-            int[] randomSentenceIndexesInTheCorpus = new int[sentencesNum];
-            randomSentenceIndexesInTheCorpus = this.uniqueRandInt(sentencesNum, numOfCorpusSentences);
+            int[] randomSentenceIndexesInTheCorpus = new int[sampleSize];
+            randomSentenceIndexesInTheCorpus = this.uniqueRandInt(sampleSize, numOfCorpusSentences);
             Scanner scanner = new Scanner(file);
             Pattern p = Pattern.compile("[\\.\\!\\?\\]]");
             scanner.useDelimiter(p);
@@ -68,9 +68,9 @@ public class TextFileCorpus extends Corpus {
             int corpusSentenceCounter = 0;
             while (scanner.hasNext()) {
                 String newSentence = scanner.next().trim();
-                if (intContains(randomSentenceIndexesInTheCorpus, corpusSentenceCounter)) {
-                    sentences.add(newSentence);
-                    if (sentences.size() >= sentencesNum) {
+                if (this.intContains(randomSentenceIndexesInTheCorpus, corpusSentenceCounter)) {
+                    generatedSentences.add(newSentence);
+                    if (generatedSentences.size() >= sampleSize) {
                         break;
                     }
                 }
@@ -81,7 +81,42 @@ public class TextFileCorpus extends Corpus {
             Logger.getLogger(TextFileCorpus.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        return sentences;
+        return generatedSentences;
+    }
+
+    /**
+     * Return random sentences containing given words.
+     *
+     * @param inputWords
+     * @return
+     */
+    public ArrayList<String> getRandomSentencesContainingWords(ArrayList<String> inputWords) {
+        ArrayList<String> selectedSentences = new ArrayList<String>();
+
+        int stepSentenceSampleSize = inputWords.size();
+        int sentenceSizeOfCorpus = this.getNumOfSentences();
+        ArrayList<String> foundedWords = new ArrayList<>();
+        do {
+            //Prevent to seach in more than avalaible sentences in the corpus
+            ArrayList<String> newSampleSentences = this.getRandomSentences(stepSentenceSampleSize);
+            for (String sampleSentence : newSampleSentences) {
+                for (String inputWord : inputWords) {
+                    if (sampleSentence.toLowerCase().matches(".*\\b" + inputWord.toLowerCase() + "\\b.*")) {
+                        if (!foundedWords.contains(inputWord)) {
+                            foundedWords.add(inputWord);
+                            selectedSentences.add(sampleSentence);
+                            break;
+                        }
+                    }
+                }
+                if (foundedWords.size() >= inputWords.size()) {
+                    break;
+                }
+            }
+            //little by little make the sample size bigger
+            stepSentenceSampleSize += stepSentenceSampleSize;
+        } while ((foundedWords.size() < inputWords.size()) && (stepSentenceSampleSize < sentenceSizeOfCorpus));
+        return selectedSentences;
     }
 
     /**
@@ -90,33 +125,25 @@ public class TextFileCorpus extends Corpus {
      * @param words
      * @return
      */
-    public ArrayList<String> getRandomSentencesContainWords(ArrayList<String> words) {
+    public ArrayList<String> getAllSentencesContainingWords(ArrayList<String> words) {
         int countWords = words.size();
         ArrayList<String> selectedSentences = new ArrayList<String>();
 
-        int whileCounter = 1;
-        int stepSentenceSampleSize = countWords;
         int sentenceSizeOfCorpus = this.getNumOfSentences();
-
-        do {
-            //Prevent to seach in more than avalaible sentences in the corpus
-            if (stepSentenceSampleSize < sentenceSizeOfCorpus) {
-                ArrayList<String> newSentences = this.getRandomSentences(stepSentenceSampleSize);
-                for (String sentence : newSentences) {
-                    for (String word : words) {
-                        if (sentence.toLowerCase().matches(".*\\b" + word.toLowerCase() + "\\b.*")) {
-                            selectedSentences.add(sentence);
-                            words.remove(word);
-                            break;
-                        }
-                    }
+        //Prevent to seach in more than avalaible sentences in the corpus
+        ArrayList<String> newSentences = this.getRandomSentences(500000);// 500000 takes 16 minutes
+        for (String sentence : newSentences) {
+            for (String word : words) {
+                if (sentence.toLowerCase().matches(".*\\b" + word.toLowerCase() + "\\b.*")) {
+                    selectedSentences.add(sentence);
                 }
-                //little by little make the sample size bigger
-                stepSentenceSampleSize += stepSentenceSampleSize;
             }
-        } while (words.size() > 0);
-
+        }
         return selectedSentences;
+    }
+
+    public ArrayList<String> getSimilarSentences() {
+        return null;
     }
 
     /**
@@ -183,16 +210,6 @@ public class TextFileCorpus extends Corpus {
             }
         }
         return contains;
-    }
-
-    @Override
-    public KBPiece getARandomKBPiece(AvKBPieces aKB) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public ArrayList<KBPiece> getRandomKBPieces(int sampleSize) {
-        return null;
     }
 
 }

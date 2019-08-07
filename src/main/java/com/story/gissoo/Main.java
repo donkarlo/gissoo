@@ -21,10 +21,12 @@ public class Main {
                 if (onlyCorpus.getAccessType() == KB_AV_ACCESS_TYPE.FILE_PATH) {
 //                    Main.genStgy = new RandomSentencesFromCorpusGenStgy(onlyCorpus, 10);
                     ArrayList<String> words = new ArrayList<String>();
-                    words.add("evil");
-                    words.add("angel");
-                    words.add("idol");
-                    words.add("god");
+                    words.add("window");
+                    words.add("lamppost");
+                    words.add("night");
+                    words.add("wind");
+                    words.add("alone");
+                    words.add("winter");
                     Main.genStgy = new RandomSentencesOfWordsFromCorpusGenStgy(onlyCorpus, words);
                 }
             }

@@ -6,4 +6,8 @@ package com.story.gissoo;
  */
 public class SemanticSentence extends Sentence {
     
+    public SemanticSentence(String stringSentence) {
+        super(stringSentence);
+    }
+    
 }

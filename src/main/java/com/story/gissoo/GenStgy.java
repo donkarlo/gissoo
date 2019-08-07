@@ -1,15 +1,18 @@
 package com.story.gissoo;
 
 import java.util.ArrayList;
+import java.util.Set;
 
 /**
  *
  * @author Mohammad Rahmani
  */
-abstract public class GenStgy {
+abstract public class GenStgy<Plan> {
 
-    protected KBs knowledgeBases = new KBs();
+    protected kbs kb = new kbs();
     protected String stringStory = null;
+    protected ArrayList<Plan> plans;
+    protected Set<Character> characters;
     /**
      * Successive sentences of the final generated story.
      */
@@ -22,16 +25,16 @@ abstract public class GenStgy {
     public GenStgy() {
     }
 
-    public GenStgy(KB knowledgeBase) {
-        this.knowledgeBases.add(knowledgeBase);
+    public GenStgy(Kb kb) {
+        this.kb.add(kb);
     }
 
-    public GenStgy(KBs knowledgeBases) {
-        this.knowledgeBases = knowledgeBases;
+    public GenStgy(kbs kbs) {
+        this.kb = kbs;
     }
 
-    public KBs getKnowledgeBases() {
-        return this.knowledgeBases;
+    public kbs getKb() {
+        return this.kb;
     }
 
     public void printlnSentences() {

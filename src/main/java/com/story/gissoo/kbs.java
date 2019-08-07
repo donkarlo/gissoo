@@ -6,16 +6,16 @@ import java.util.ArrayList;
  *
  * @author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
  */
-public class KBs {
+public class kbs {
 
-    protected ArrayList<KB> knowledgeBase = new ArrayList<>();
+    protected ArrayList<Kb> knowledgeBase = new ArrayList<>();
 
-    public KBs add(KB kb) {
+    public kbs add(Kb kb) {
         this.knowledgeBase.add(kb);
         return this;
     }
 
-    public ArrayList<KB> getKBs() {
+    public ArrayList<Kb> getKBs() {
         return knowledgeBase;
     }
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
  *
  * @author Mohammad
  */
-abstract public class Corpus extends KB {
+abstract public class Corpus extends Kb {
 
     /**
      * An option among what AV_ACCESS_TYPES offers to indicate what is the

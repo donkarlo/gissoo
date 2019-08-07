@@ -6,4 +6,8 @@ package com.story.gissoo;
  */
 public class HumanSentence extends Sentence {
 
+    public HumanSentence(String stringSentence) {
+        super(stringSentence);
+    }
+
 }
