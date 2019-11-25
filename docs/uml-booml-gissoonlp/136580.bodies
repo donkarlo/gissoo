@@ -1,0 +1,5 @@
+class VADClassifiedVectorSpace
+!!!142084.java!!!	VADClassifiedVectorSpace(inout vadSemanticClasses : ArrayList<VADSemanticVectorClass>)
+        this.vadSemanticClasses = vadSemanticClasses;
+!!!142212.java!!!	getNewClassAfterASemanticVectorCompositStep(inout semanticVector : SemanticCompositVector) : SemanticVectorClass
+        return null;

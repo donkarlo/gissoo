@@ -1,0 +1,290 @@
+format 222
+"antonym" // nde::nlp::semantic::vector::antonym
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/semantic/vector/antonym/"
+  java_package "nde.nlp.semantic.vector.antonym"
+  classview 130180 "antonym"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 135556 "WordbasedAntonymClassifiedVectorSpace"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "A word embedding clustering that puts antonym dependencies in different
+classes
+
+@author donkarlo
+"
+      classrelation 136452 // <generalisation>
+	relation 136452 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136452 // <generalisation>
+	  b parent class_ref 135684 // ClassifiedVectorSpace
+      end
+
+      classrelation 136580 // <realization>
+	relation 136580 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136580 // <realization>
+	  b parent class_ref 135812 // ClassifiedVectorSpaceInterface
+      end
+
+      operation 141060 "WordbasedAntonymClassifiedVectorSpace"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "semanticClasses" explicit_type "ArrayList<SemanticVectorClass>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141188 "getNewClassAfterASemanticVectorCompositStep"
+	public return_type class_ref 135940 // SemanticVectorClass
+	nparams 1
+	  param inout name "semanticVector" type class_ref 133124 // SemanticCompositVector
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+	comment "
+@param semanticVector
+@return 
+"
+      end
+    end
+
+    class 136068 "WordbasedAntonymClassifiedVectorSpaceSvoDependncy"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "A word embedding clustering that puts antonym dependencies in different
+classes
+
+@author donkarlo
+"
+      classrelation 136708 // <generalisation>
+	relation 136708 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136708 // <generalisation>
+	  b parent class_ref 135684 // ClassifiedVectorSpace
+      end
+
+      classrelation 136836 // <realization>
+	relation 136836 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136836 // <realization>
+	  b parent class_ref 135812 // ClassifiedVectorSpaceInterface
+      end
+
+      operation 141316 "WordbasedAntonymClassifiedVectorSpaceSvoDependncy"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "semanticClasses" explicit_type "ArrayList<SemanticVectorClass>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 141444 "getNewClassAfterASemanticVectorCompositStep"
+	public return_type class_ref 135940 // SemanticVectorClass
+	nparams 1
+	  param inout name "semanticVector" type class_ref 133124 // SemanticCompositVector
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+	comment "
+@param semanticVector
+@return 
+"
+      end
+
+      operation 141572 "getNewClassAfterASemanticCompositStep"
+	public return_type class_ref 135940 // SemanticVectorClass
+	nparams 2
+	  param inout name "semanticVectorClass" type class_ref 135940 // SemanticVectorClass
+	  param inout name "svoDependencyVector" type class_ref 132996 // SemanticCompositVector
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 136196 "WordbasedAntonymClusterer"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 136964 // <realization>
+	relation 136964 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 136964 // <realization>
+	  b parent class_ref 136324 // ClusteringStrgyInterface
+      end
+
+      operation 141828 "getClasses"
+	public return_type class_ref 135940 // SemanticVectorClass
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 130308 "antonym"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 135812 "WordbasedAntonymClassifiedVectorSpace"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+import nde.nlp.semantic.vector.classified.ClassifiedVectorSpace;
+import nde.nlp.semantic.vector.classified.ClassifiedVectorSpaceInterface;
+import nde.nlp.semantic.vector.SemanticCompositVector;
+import nde.nlp.semantic.vector.classified.SemanticVectorClass;
+${definition}"
+      associated_elems
+	class_ref 135556 // WordbasedAntonymClassifiedVectorSpace
+      end
+    end
+
+    artifact 135940 "WordbasedAntonymClassifiedVectorSpaceSvoDependncy"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+import nde.nlp.semantic.vector.classified.ClassifiedVectorSpace;
+import nde.nlp.semantic.vector.classified.ClassifiedVectorSpaceInterface;
+import nde.nlp.semantic.vector.SemanticCompositVector;
+import nde.nlp.semantic.vector.classified.SemanticVectorClass;
+${definition}"
+      associated_elems
+	class_ref 136068 // WordbasedAntonymClassifiedVectorSpaceSvoDependncy
+      end
+    end
+
+    artifact 136196 "WordbasedAntonymClusterer"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+import nde.nlp.semantic.vector.classified.ClusteringStrgyInterface;
+import nde.nlp.semantic.vector.classified.SemanticVectorClass;
+${definition}"
+      associated_elems
+	class_ref 136196 // WordbasedAntonymClusterer
+      end
+    end
+  end
+end

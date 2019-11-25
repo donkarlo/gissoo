@@ -1,0 +1,798 @@
+format 222
+"semantic" // nde::nlp::semantic
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/semantic/"
+  java_package "nde.nlp.semantic"
+  classview 128772 "semantic"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 129796 "HumanSentence"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 135300 // <generalisation>
+	relation 135300 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135300 // <generalisation>
+	  b parent class_ref 134660 // Sentence
+      end
+
+      operation 139652 "HumanSentence"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "stringSentence" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 130308 "SemanticComposit"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 129412 // <generalisation>
+	relation 129412 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129412 // <generalisation>
+	  b parent class_ref 130436 // SemanticUnit
+      end
+    end
+
+    class 130436 "SemanticUnit"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 129284 // <realization>
+	relation 129284 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129284 // <realization>
+	  b parent class_ref 130564 // SemanticInterface
+      end
+
+      attribute 129668 "rawSemantic"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 130564 "SemanticInterface"
+      visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+    end
+
+    class 132868 "Entity"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "For Entities in Named-entity relations Is such as objects, infinitive form of
+events or sentences. It's subjects or objects, if any are more general
+
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      operation 138756 "Entity"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 133380 "Event"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+    end
+
+    class 134404 "Clause"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+    end
+
+    class 134532 "Entities"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 134916 // entities (<unidirectional association>)
+	relation 134916 --->
+	  stereotype "ArrayList"
+	  a role_name "entities" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 134916 // entities (<unidirectional association>)
+	  b parent class_ref 132868 // Entity
+      end
+
+      attribute 131460 "AvCommonThemes"
+	class_attribute const_attribute private explicit_type "String"
+	multiplicity "[]"
+	init_value " {\"angry\"}"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131588 "CommonThemes"
+	private explicit_type "String"
+	init_value " null"
+	stereotype "ArrayList"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131716 "avGenSources"
+	class_attribute const_attribute private explicit_type "String"
+	multiplicity "[]"
+	init_value " {\"corpora\"}"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type}${multiplicity} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 131844 "genSources"
+	private explicit_type "String"
+	init_value " null"
+	stereotype "ArrayList"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 138628 "getLength"
+	public explicit_return_type "int"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+    end
+
+    class 134660 "Sentence"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 135044 // <generalisation>
+	relation 135044 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135044 // <generalisation>
+	  b parent class_ref 130308 // SemanticComposit
+      end
+
+      classrelation 135172 // <realization>
+	relation 135172 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135172 // <realization>
+	  b parent class_ref 130564 // SemanticInterface
+      end
+
+      attribute 131972 "stringSentence"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 138884 "Sentence"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "stringSentence" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param stringSentence
+"
+      end
+
+      operation 139012 "getStringSentence"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+
+      operation 139140 "getSmallestMeaningfulPartContainingWord"
+	public explicit_return_type "String"
+	nparams 1
+	  param in name "word" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139268 "getClauses"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139396 "getIndependentClauses"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139524 "getDependentClauses"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134788 "Sentences"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 135428 // <generalisation>
+	relation 135428 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135428 // <generalisation>
+	  b parent class_ref 130308 // SemanticComposit
+      end
+
+      classrelation 135556 // sentences (<unidirectional association>)
+	relation 135556 --->
+	  stereotype "ArrayList"
+	  a role_name "sentences" init_value " new ArrayList<Sentence>()" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 135556 // sentences (<unidirectional association>)
+	  b parent class_ref 134660 // Sentence
+      end
+
+      operation 139780 "Sentences"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "sentences" explicit_type "ArrayList<Sentence>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 139908 "smallestMeaningfulPartContainingWord"
+	public explicit_return_type "ArrayList<String>"
+	nparams 1
+	  param in name "word" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134916 "SimpleSentence"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      attribute 132100 "subject"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132228 "verb"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 132356 "object"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 140036 "SimpleSentence"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 140164 "SimpleSentence"
+	public explicit_return_type ""
+	nparams 2
+	  param in name "subject" explicit_type "String"
+	  param in name "verb" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param subject
+@param verb 
+"
+      end
+
+      operation 140292 "SimpleSentence"
+	public explicit_return_type ""
+	nparams 3
+	  param in name "subject" explicit_type "String"
+	  param in name "verb" explicit_type "String"
+	  param in name "object" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}, ${t2} ${p2}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param subject
+@param verb
+@param object 
+"
+      end
+    end
+
+    class 135044 "WordSemantic"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 135684 // <generalisation>
+	relation 135684 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 135684 // <generalisation>
+	  b parent class_ref 130436 // SemanticUnit
+      end
+
+      operation 140420 "WordSemantic"
+	public explicit_return_type ""
+	nparams 1
+	  param in name "word" explicit_type "String"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128772 "semantic"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 130052 "SemanticInterface"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 130564 // SemanticInterface
+      end
+    end
+
+    artifact 130180 "SemanticUnit"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 130436 // SemanticUnit
+      end
+      comment "Such as a word. 
+"
+    end
+
+    artifact 130308 "SemanticComposit"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 130308 // SemanticComposit
+      end
+    end
+
+    artifact 134020 "Clause"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 134404 // Clause
+      end
+    end
+
+    artifact 134148 "Entities"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 134532 // Entities
+      end
+    end
+
+    artifact 134276 "Entity"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 132868 // Entity
+      end
+    end
+
+    artifact 134404 "Event"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 133380 // Event
+      end
+    end
+
+    artifact 134532 "Sentence"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 134660 // Sentence
+      end
+    end
+
+    artifact 134660 "HumanSentence"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 129796 // HumanSentence
+      end
+    end
+
+    artifact 134788 "Sentences"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 134788 // Sentences
+      end
+    end
+
+    artifact 134916 "SimpleSentence"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 134916 // SimpleSentence
+      end
+    end
+
+    artifact 135044 "WordSemantic"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.semantic.SemanticUnit;
+${definition}"
+      associated_elems
+	class_ref 135044 // WordSemantic
+      end
+    end
+  end
+
+  package_ref 129412 // vector
+end

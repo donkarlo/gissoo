@@ -1,0 +1,13 @@
+class Sentence
+!!!138884.java!!!	Sentence(in stringSentence : String)
+        this.stringSentence = stringSentence;
+!!!139012.java!!!	getStringSentence() : String
+        return stringSentence;
+!!!139140.java!!!	getSmallestMeaningfulPartContainingWord(in word : String) : String
+        return null;
+!!!139268.java!!!	getClauses() : ArrayList<String>
+        return null;
+!!!139396.java!!!	getIndependentClauses() : ArrayList<String>
+        return null;
+!!!139524.java!!!	getDependentClauses() : ArrayList<String>
+        return null;

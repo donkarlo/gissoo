@@ -1,0 +1,44 @@
+format 222
+"nlp" // nde::nlp
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/"
+  java_package "nde.nlp"
+  package_ref 128900 // corenlp
+
+  package_ref 129028 // corpus
+
+  package_ref 129156 // semantic
+
+  package_ref 129284 // dependency
+
+  package_ref 130180 // gissoo
+end

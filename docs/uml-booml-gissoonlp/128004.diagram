@@ -1,0 +1,395 @@
+format 222
+
+classcanvas 128388 class_ref 133764 // StochGradSeqEmbedDepArtfulness
+  classdiagramsettings member_max_width 0 end
+  xyz 386.389 780.889 2000
+end
+classcanvas 129156 class_ref 130308 // SemanticComposit
+  classdiagramsettings member_max_width 0 end
+  xyz 996.778 515.722 2000
+end
+classcanvas 129284 class_ref 130436 // SemanticUnit
+  classdiagramsettings member_max_width 0 end
+  xyz 1203.78 227.333 2006
+end
+classcanvas 129540 class_ref 130564 // SemanticInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 1189.78 82.1111 2012
+end
+classcanvas 129796 class_ref 130180 // Dependency
+  classdiagramsettings member_max_width 0 end
+  xyz 1019.78 834.278 2006
+end
+classcanvas 130180 class_ref 130820 // DependencySequence
+  classdiagramsettings member_max_width 0 end
+  xyz 767.056 756.889 3005
+end
+classcanvas 130820 class_ref 131204 // DependencyVector
+  classdiagramsettings member_max_width 0 end
+  xyz 1941.67 160 2017
+end
+classcanvas 130948 class_ref 131332 // DpendencyAmbiguityRater
+  classdiagramsettings member_max_width 0 end
+  xyz 2125.67 160 2023
+end
+classcanvas 131204 class_ref 131460 // EmbeddingClustering
+  classdiagramsettings member_max_width 0 end
+  xyz 2143.67 265 2029
+end
+classcanvas 131460 class_ref 131588 // DependencyPairAntonymRater
+  classdiagramsettings member_max_width 0 end
+  xyz 1200.22 823.722 3011
+end
+classcanvas 131844 class_ref 131716 // SequenceAntonymRater
+  classdiagramsettings member_max_width 0 end
+  xyz 963.5 1101.56 3011
+end
+classcanvas 132100 class_ref 131844 // SequenceAntonymRaterStructure
+  classdiagramsettings member_max_width 0 end
+  xyz 974.5 953.111 3017
+end
+classcanvas 132612 class_ref 131972 // ArtfullnessComputer
+  classdiagramsettings member_max_width 0 end
+  xyz 770.444 1335.89 3011
+end
+classcanvas 132868 class_ref 132100 // ArtfulnessComputerInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 984.667 1660.67 3023
+end
+classcanvas 132996 class_ref 132228 // CompositArtfulnessComputer
+  classdiagramsettings member_max_width 0 end
+  xyz 739.444 1461.89 3029
+end
+classcanvas 133508 class_ref 132356 // AmbiguityComputer
+  classdiagramsettings member_max_width 0 end
+  xyz 1131.17 1257.17 3029
+end
+classcanvas 133892 class_ref 132484 // AntonymComputer
+  classdiagramsettings member_max_width 0 end
+  xyz 1252.67 1486.94 3035
+end
+classcanvas 134276 class_ref 132612 // VadGravityComputer
+  classdiagramsettings member_max_width 0 end
+  xyz 1010.67 1387.72 3041
+end
+classcanvas 138116 class_ref 134660 // Sentence
+  classdiagramsettings member_max_width 0 end
+  xyz 860.333 228.833 2018
+end
+classcanvas 138500 class_ref 134788 // Sentences
+  classdiagramsettings member_max_width 0 end
+  xyz 1109.94 693.167 3047
+end
+classcanvas 139012 class_ref 135044 // WordSemantic
+  classdiagramsettings member_max_width 0 end
+  xyz 1195.17 514.556 3052
+end
+classcanvas 141060 class_ref 131076 // EmbeddingStrgyInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 1924.67 40 3047
+end
+classcanvas 141316 class_ref 133124 // SemanticCompositVector
+  classdiagramsettings member_max_width 0 end
+  xyz 245.278 1794 3039
+end
+classcanvas 141572 class_ref 135172 // SemanticVectorSpace
+  classdiagramsettings member_max_width 0 end
+  xyz 787.333 504.111 3045
+end
+classcanvas 141956 class_ref 135428 // VectorSpaceBuilder
+  classdiagramsettings member_max_width 0 end
+  xyz 1734.67 48 3056
+end
+classcanvas 142340 class_ref 135812 // ClassifiedVectorSpaceInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 1077.33 1869.56 3062
+end
+classcanvas 142468 class_ref 135940 // SemanticVectorClass
+  classdiagramsettings member_max_width 0 end
+  xyz 39.9444 1794 3051
+end
+classcanvas 142724 class_ref 136324 // ClusteringStrgyInterface
+  classdiagramsettings member_max_width 0 end
+  xyz 39 2161.89 3047
+end
+classcanvas 142980 class_ref 136580 // VADClassifiedVectorSpace
+  classdiagramsettings member_max_width 0 end
+  xyz 1075.33 1993.5 3068
+end
+classcanvas 143236 class_ref 136708 // VADSemanticVectorClass
+  classdiagramsettings member_max_width 0 end
+  xyz 1461.06 2002.89 3074
+end
+classcanvas 143492 class_ref 136836 // VADSemanticVector
+  classdiagramsettings member_max_width 0 end
+  xyz 1481.06 1758.39 3080
+end
+classcanvas 144004 class_ref 137092 // Clusterer
+  classdiagramsettings member_max_width 0 end
+  xyz 81 2281.89 3056
+end
+relationcanvas 129412 relation_ref 129412 // <generalisation>
+  geometry VHV unfixed
+  from ref 129156 z 2007 to point 1066 473
+  line 139780 z 2007 to point 1254 473
+  line 139908 z 2007 to ref 129284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129668 relation_ref 129284 // <realization>
+  from ref 129284 z 2013 to ref 129540
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 129924 relation_ref 129540 // <generalisation>
+  from ref 129796 z 2007 to ref 129156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130308 relation_ref 129668 // <generalisation>
+  geometry VHV unfixed
+  decenter_begin 479
+  from ref 130180 z 3006 to point 846 651
+  line 135812 z 3006 to point 1066 651
+  line 135940 z 3006 to ref 129156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130436 relation_ref 129796 // <unidirectional association>
+  decenter_begin 875
+  from ref 130180 z 3006 stereotype "<<ArrayList>>" xyz 931.5 854.5 3006 to ref 129796
+  role_a_pos 917 826 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 130564 relation_ref 133764 // <unidirectional association>
+  from ref 128388 z 3006 to ref 130180
+  role_a_pos 465 783 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131076 relation_ref 130180 // <unidirectional association>
+  from ref 130948 z 2024 to ref 130820
+  role_a_pos 2095 163 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131332 relation_ref 130308 // <unidirectional association>
+  decenter_begin 481
+  decenter_end 477
+  from ref 130948 z 2030 to ref 131204
+  role_a_pos 2231 235 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131588 relation_ref 130436 // <unidirectional association>
+  decenter_begin 179
+  decenter_end 190
+  from ref 131460 z 3012 to ref 129796
+  role_a_pos 1127 813 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131716 relation_ref 130564 // <unidirectional association>
+  decenter_begin 651
+  decenter_end 764
+  from ref 131460 z 3012 to point 1158 881
+  line 134660 z 3012 to point 1158 870
+  line 134788 z 3012 to ref 129796
+  role_a_pos 1127 840 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 131972 relation_ref 130692 // <unidirectional association>
+  geometry HV unfixed
+  decenter_end 912
+  from ref 131844 z 3012 to point 920 1155
+  line 140036 z 3012 to ref 130180
+  role_a_pos 932 879 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132228 relation_ref 130948 // <unidirectional association>
+  decenter_begin 254
+  decenter_end 180
+  from ref 132100 z 3018 to ref 129796
+  role_a_pos 1046 891 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132356 relation_ref 131076 // <unidirectional association>
+  decenter_begin 509
+  decenter_end 818
+  from ref 132100 z 3018 to ref 129796
+  role_a_pos 1109 891 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132484 relation_ref 130820 // <unidirectional association>
+  from ref 131844 z 3018 stereotype "<<ArrayList>>" xyz 1051 1079.5 3018 to ref 132100
+  role_a_pos 1107 1070 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 132740 relation_ref 131204 // <unidirectional association>
+  decenter_end 479
+  from ref 132612 z 3012 to ref 130180
+  role_a_pos 858 879 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133124 relation_ref 131332 // <generalisation>
+  from ref 132996 z 3030 to ref 132612
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133252 relation_ref 131460 // <realization>
+  geometry VHV unfixed
+  from ref 132996 z 3030 to point 847 1617
+  line 136068 z 3030 to point 1087 1617
+  line 136196 z 3030 to ref 132868
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133380 relation_ref 131588 // <unidirectional association>
+  from ref 132996 z 3030 to point 698 1518
+  line 135300 z 3030 to point 698 1701
+  line 135428 z 3030 stereotype "<<ArrayList>>" xyz 795.5 1701 3030 to ref 132868
+  role_a_pos 834 1671 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133636 relation_ref 131716 // <generalisation>
+  decenter_begin 819
+  decenter_end 192
+  from ref 133508 z 3030 to point 970 1330
+  line 135556 z 3030 to point 970 1351
+  line 135684 z 3030 to ref 132612
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 133764 relation_ref 131844 // <realization>
+  geometry VHV unfixed
+  decenter_begin 515
+  from ref 133508 z 3030 to point 1207 1617
+  line 134916 z 3030 to point 1087 1617
+  line 135044 z 3030 to ref 132868
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134020 relation_ref 131972 // <generalisation>
+  decenter_begin 538
+  from ref 133892 z 3036 to point 1440 1534
+  line 136580 z 3036 to point 1440 1784
+  line 136708 z 3036 to point 656 1784
+  line 136836 z 3036 to point 656 1377
+  line 140420 z 3036 to ref 132612
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134148 relation_ref 132100 // <realization>
+  geometry VHV unfixed
+  from ref 133892 z 3036 to point 1322 1617
+  line 136964 z 3036 to point 1087 1617
+  line 137092 z 3036 to ref 132868
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134404 relation_ref 132228 // <generalisation>
+  decenter_begin 179
+  decenter_end 819
+  from ref 134276 z 3042 to ref 132612
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 134532 relation_ref 132356 // <realization>
+  from ref 134276 z 3042 to ref 132868
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138244 relation_ref 135044 // <generalisation>
+  decenter_end 103
+  from ref 138116 z 2019 to ref 129156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138372 relation_ref 135172 // <realization>
+  geometry VHV unfixed
+  from ref 138116 z 2019 to point 1009 186
+  line 139524 z 2019 to point 1254 186
+  line 139652 z 2019 to ref 129540
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138628 relation_ref 135428 // <generalisation>
+  geometry VHV unfixed
+  from ref 138500 z 3048 to point 1246 651
+  line 140164 z 3048 to point 1066 651
+  line 140292 z 3048 to ref 129156
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 138756 relation_ref 135556 // <unidirectional association>
+  decenter_begin 527
+  from ref 138500 z 3048 to point 1429 740
+  line 140548 z 3048 to point 1429 40
+  line 140676 z 3048 stereotype "<<ArrayList>>" xyz 1079 42 3048 to point 818 40
+  line 140804 z 3048 to point 818 327
+  line 140932 z 3048 to ref 138116
+  role_a_pos 782 300 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 139140 relation_ref 135684 // <generalisation>
+  decenter_begin 521
+  from ref 139012 z 3053 to ref 129284
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141188 relation_ref 130052 // <realization>
+  decenter_end 481
+  from ref 130820 z 3048 to ref 141060
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141444 relation_ref 132868 // <unidirectional association>
+  geometry VHV unfixed
+  decenter_begin 513
+  decenter_end 103
+  from ref 141316 z 3040 to point 340 609
+  line 144260 z 3040 to point 1008 609
+  line 144388 z 3040 to ref 129156
+  role_a_pos 1020 572 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 141700 relation_ref 135812 // <unidirectional association>
+  from ref 141572 z 3046 stereotype "<<ArrayList>>" xyz 927.5 535.5 3046 to ref 129156
+  role_a_pos 857 507 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 142084 relation_ref 136068 // <unidirectional association>
+  from ref 141956 z 3057 to ref 141060
+  role_a_pos 1806 51 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 142596 relation_ref 137092 // <unidirectional association>
+  from ref 142468 z 3052 stereotype "<<ArrayList>>" xyz 176 1826 3052 to ref 141316
+  role_a_pos 65 1797 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143108 relation_ref 137220 // <realization>
+  from ref 142980 z 3069 to ref 142340
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143364 relation_ref 137348 // <unidirectional association>
+  from ref 142980 z 3075 stereotype "<<ArrayList>>" xyz 1392 2033.5 3075 to ref 143236
+  role_a_pos 1313 2005 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143620 relation_ref 137476 // <generalisation>
+  decenter_begin 518
+  from ref 143492 z 3081 to ref 141316
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 143748 relation_ref 137604 // <unidirectional association>
+  decenter_begin 481
+  decenter_end 476
+  from ref 143236 z 3081 stereotype "<<ArrayList>>" xyz 1507 1944.5 3081 to ref 143492
+  role_a_pos 1563 1899 3000 no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+relationcanvas 144132 relation_ref 137860 // <realization>
+  from ref 144004 z 3057 to ref 142724
+  no_role_a no_role_b
+  no_multiplicity_a no_multiplicity_b
+end
+end

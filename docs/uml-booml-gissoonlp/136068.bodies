@@ -1,0 +1,7 @@
+class WordbasedAntonymClassifiedVectorSpaceSvoDependncy
+!!!141316.java!!!	WordbasedAntonymClassifiedVectorSpaceSvoDependncy(inout semanticClasses : ArrayList<SemanticVectorClass>)
+        super(semanticClasses);
+!!!141444.java!!!	getNewClassAfterASemanticVectorCompositStep(inout semanticVector : SemanticCompositVector) : SemanticVectorClass
+        return null;
+!!!141572.java!!!	getNewClassAfterASemanticCompositStep(inout semanticVectorClass : SemanticVectorClass, inout svoDependencyVector : SemanticCompositVector) : SemanticVectorClass
+        return null;

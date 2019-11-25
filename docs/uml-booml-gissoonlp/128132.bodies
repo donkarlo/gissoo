@@ -1,0 +1,8 @@
+class Dir
+!!!128132.java!!!	Dir(in path : String)
+        this.path = path;
+!!!128260.java!!!	hasTextFile() : boolean
+        return true;
+!!!128388.java!!!	isDir() : boolean
+        File file = new File(this.path);
+        return file.isDirectory();

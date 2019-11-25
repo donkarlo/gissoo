@@ -1,0 +1,17 @@
+class SequenceAntonymRater
+!!!133764.java!!!	SequenceAntonymRater(inout ds : DependencySequence)
+        this.ds = ds;
+        this.srss = new ArrayList<SequenceAntonymRaterStructure>();
+!!!133892.java!!!	getSequenceAntonymRaterStructures() : SequenceAntonymRaterStructure
+
+        for (Dependency d1 : ds.getDependencies()) {
+            for (Dependency d2 : ds.getDependencies()) {
+                DependencyPairAntonymRater par = new DependencyPairAntonymRater(d1, d2);
+                SequenceAntonymRaterStructure srs = new SequenceAntonymRaterStructure(d1, d2, par.getAntonymRate(), 0);
+                srss.add(srs);
+            }
+        }
+        return null;
+!!!134020.java!!!	getRate() : double
+
+        return 0;

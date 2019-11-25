@@ -1,0 +1,12 @@
+class CompositArtfulnessComputer
+!!!134532.java!!!	CompositArtfulnessComputer(inout artfullnessComputers : ArrayList<ArtfulnessComputerInterface>)
+        super(null);
+        this.artfullnessComputers = artfullnessComputers;
+!!!134660.java!!!	getArtfulnessValue() : double
+        double totalArtfulnessValue = 0;
+        for (ArtfulnessComputerInterface ac : this.artfullnessComputers) {
+            totalArtfulnessValue += ac.getArtfulnessValue();
+        }
+        return totalArtfulnessValue;
+!!!134788.java!!!	addArtfulnessComputer(inout artfulnessComputer : ArtfulnessComputerInterface) : void
+        artfullnessComputers.add(artfulnessComputer);

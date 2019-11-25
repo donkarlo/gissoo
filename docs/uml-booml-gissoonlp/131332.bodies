@@ -1,0 +1,4 @@
+class DpendencyAmbiguityRater
+!!!133380.java!!!	DpendencyAmbiguityRater(inout de : DependencyVector, inout ec : EmbeddingClustering)
+        this.de = de;
+        this.ec = ec;

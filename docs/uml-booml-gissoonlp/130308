@@ -1,0 +1,36 @@
+format 222
+"dependency" // nde::nlp::gissoo::dependency
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/gissoo/dependency/"
+  java_package "nde.nlp.gissoo.dependency"
+  package_ref 130436 // simple
+end

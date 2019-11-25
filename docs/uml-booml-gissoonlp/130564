@@ -1,0 +1,428 @@
+format 222
+"randomSentence" // nde::nlp::gissoo::randomSentence
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/gissoo/randomSentence/"
+  java_package "nde.nlp.gissoo.randomSentence"
+  classview 130052 "randomSentence"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 133892 "Config"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 133892 // inst (<unidirectional association>)
+	relation 133892 --->
+	  a role_name "inst" init_value " null" class_relation private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 133892 // inst (<unidirectional association>)
+	  b parent class_ref 133892 // Config
+      end
+
+      classrelation 134020 // textFileCorpora (<unidirectional association>)
+	relation 134020 --->
+	  a role_name "textFileCorpora" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 134020 // textFileCorpora (<unidirectional association>)
+	  b parent class_ref 129924 // TextFileCorpora
+      end
+
+      classrelation 134148 // configUnits (<unidirectional association>)
+	relation 134148 --->
+	  stereotype "ArrayList"
+	  a role_name "configUnits" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 134148 // configUnits (<unidirectional association>)
+	  b parent class_ref 128004 // ConfigUnit
+      end
+
+      operation 137348 "Config"
+	private explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 137476 "getInst"
+	class_operation public return_type class_ref 133892 // Config
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+
+      operation 137604 "getTextFileCorpora"
+	public return_type class_ref 129924 // TextFileCorpora
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 134020 "Main"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 134276 // genStgy (<unidirectional association>)
+	relation 134276 --->
+	  a role_name "genStgy" init_value " null" class_relation private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 134276 // genStgy (<unidirectional association>)
+	  b parent class_ref 133636 // GenStgy
+      end
+
+      operation 137732 "main"
+	class_operation public explicit_return_type "void"
+	nparams 1
+	  param inout name "args" explicit_type "String"
+	multiplicity "[]"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0}[] ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "@param args the command line arguments
+"
+      end
+    end
+
+    class 134148 "RandomSentencesFromCorpusGenStgy"
+      visibility public 
+      nactuals 1
+      actual class class_ref 133636 // GenStgy
+        rank 0 explicit_value ""
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 134404 // <generalisation>
+	relation 134404 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134404 // <generalisation>
+	  b parent class_ref 133636 // GenStgy
+      end
+
+      classrelation 134532 // textFileCorpus (<unidirectional association>)
+	relation 134532 --->
+	  a role_name "textFileCorpus" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 134532 // textFileCorpus (<unidirectional association>)
+	  b parent class_ref 130052 // TextFileCorpus
+      end
+
+      attribute 131204 "sampleSize"
+	private explicit_type "int"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 137860 "RandomSentencesFromCorpusGenStgy"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "textFileCorpus" type class_ref 130052 // TextFileCorpus
+	  param in name "sampleSize" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 137988 "getStringStory"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 138116 "getSentences"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+    end
+
+    class 134276 "RandomSentencesOfWordsFromCorpusGenStgy"
+      visibility public 
+      nactuals 1
+      actual class class_ref 133636 // GenStgy
+        rank 0 explicit_value ""
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 134660 // <generalisation>
+	relation 134660 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 134660 // <generalisation>
+	  b parent class_ref 133636 // GenStgy
+      end
+
+      classrelation 134788 // textFileCorpus (<unidirectional association>)
+	relation 134788 --->
+	  a role_name "textFileCorpus" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 134788 // textFileCorpus (<unidirectional association>)
+	  b parent class_ref 130052 // TextFileCorpus
+      end
+
+      attribute 131332 "words"
+	protected explicit_type "String"
+	init_value " new ArrayList<>()"
+	stereotype "ArrayList"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      operation 138244 "RandomSentencesOfWordsFromCorpusGenStgy"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "textFileCorpus" type class_ref 130052 // TextFileCorpus
+	  param inout name "words" explicit_type "ArrayList<String>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 138372 "getStringStory"
+	public explicit_return_type "String"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+
+      operation 138500 "getSentences"
+	public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+    end
+  end
+
+  deploymentview 130052 "randomSentence"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 133508 "Config"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.corpus.TextFileCorpus;
+import nde.nlp.corpus.TextFileCorpora;
+import java.util.ArrayList;
+import nde.nlp.gissoo.CmuMoviePlotCorpus;
+import nde.config.ConfigUnit;
+${definition}"
+      associated_elems
+	class_ref 133892 // Config
+      end
+    end
+
+    artifact 133636 "Main"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.gissoo.randomSentence.Config;
+import nde.kb.KB_AV_ACCESS_TYPE;
+import nde.nlp.corpus.TextFileCorpus;
+import java.util.ArrayList;
+import nde.nlp.gissoo.GenStgy;
+${definition}"
+      associated_elems
+	class_ref 134020 // Main
+      end
+    end
+
+    artifact 133764 "RandomSentencesFromCorpusGenStgy"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.corpus.TextFileCorpus;
+import java.util.ArrayList;
+import nde.nlp.gissoo.GenStgy;
+${definition}"
+      associated_elems
+	class_ref 134148 // RandomSentencesFromCorpusGenStgy
+      end
+    end
+
+    artifact 133892 "RandomSentencesOfWordsFromCorpusGenStgy"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.corpus.TextFileCorpus;
+import java.util.ArrayList;
+import nde.nlp.gissoo.GenStgy;
+${definition}"
+      associated_elems
+	class_ref 134276 // RandomSentencesOfWordsFromCorpusGenStgy
+      end
+    end
+  end
+end

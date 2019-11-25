@@ -1,0 +1,406 @@
+format 222
+"gissoo" // nde::nlp::gissoo
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/gissoo/"
+  java_package "nde.nlp.gissoo"
+  classview 129796 "gissoo"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 133252 "Character"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      attribute 130308 "id"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130436 "fname"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130564 "lname"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130692 "popularName"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 133252 // commitedEventsSoFar (<unidirectional association>)
+	relation 133252 --->
+	  stereotype "ArrayList"
+	  a role_name "commitedEventsSoFar" protected
+	    comment "The character has so far \"RAN\" from here to there in t time and picked an apple. 
+
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 133252 // commitedEventsSoFar (<unidirectional association>)
+	  b parent class_ref 133380 // Event
+      end
+    end
+
+    class 133508 "CmuMoviePlotCorpus"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 133380 // <generalisation>
+	relation 133380 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 133380 // <generalisation>
+	  b parent class_ref 130052 // TextFileCorpus
+      end
+
+      operation 136068 "CmuMoviePlotCorpus"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136196 "getRandomSentences"
+	public explicit_return_type "ArrayList<String>"
+	nparams 1
+	  param in name "sampleSize" explicit_type "int"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param sampleSize
+@return
+"
+      end
+    end
+
+    class 133636 "GenStgy"
+      abstract visibility public 
+      nformals 1
+      formal name "Plan" type "" explicit_default_value ""
+        explicit_extends ""
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Sample sentences that it should produce. 
+The smell of a smoke of a cigarette is like a beared smiling middle-aged man with curly hair
+Death is like being invisible in sunset of repetitive desert when you circle around yourself
+
+@author Mohammad Rahmani
+"
+      classrelation 133508 // kb (<unidirectional association>)
+	relation 133508 --->
+	  a role_name "kb" init_value " new kbs()" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 133508 // kb (<unidirectional association>)
+	  b parent class_ref 129028 // kbs
+      end
+
+      attribute 130820 "stringStory"
+	protected explicit_type "String"
+	init_value " null"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 130948 "plans"
+	protected explicit_type "Plan"
+	stereotype "ArrayList"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 133636 // characters (<unidirectional association>)
+	relation 133636 --->
+	  stereotype "Set"
+	  a role_name "characters" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 133636 // characters (<unidirectional association>)
+	  b parent class_ref 133252 // Character
+      end
+
+      attribute 131076 "sentences"
+	protected explicit_type "String"
+	init_value " null"
+	stereotype "ArrayList"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment "Successive sentences of the final generated story.
+
+"
+      end
+
+      operation 136324 "getStringStory"
+	abstract cpp_inline public explicit_return_type "String"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136452 "getSentences"
+	abstract cpp_inline public explicit_return_type "ArrayList<String>"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136580 "GenStgy"
+	cpp_inline public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136708 "GenStgy"
+	cpp_inline public explicit_return_type ""
+	nparams 1
+	  param inout name "kb" type class_ref 128388 // Kb
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136836 "GenStgy"
+	cpp_inline public explicit_return_type ""
+	nparams 1
+	  param inout name "kbs" type class_ref 129028 // kbs
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 136964 "getKb"
+	cpp_inline public return_type class_ref 129028 // kbs
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 137092 "printlnSentences"
+	cpp_inline public explicit_return_type "void"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 129796 "gissoo"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 132996 "Character"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.semantic.Event;
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 133252 // Character
+      end
+    end
+
+    artifact 133124 "CmuMoviePlotCorpus"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.kb.KB_AV_ACCESS_TYPE;
+import nde.nlp.corpus.TextFileCorpus;
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 133508 // CmuMoviePlotCorpus
+      end
+    end
+
+    artifact 133252 "GenStgy"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.kb.kbs;
+import nde.kb.Kb;
+import java.util.ArrayList;
+import java.util.Set;
+${definition}"
+      associated_elems
+	class_ref 133636 // GenStgy
+      end
+    end
+  end
+
+  package_ref 130308 // dependency
+
+  package_ref 130564 // randomSentence
+end

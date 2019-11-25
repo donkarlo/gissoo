@@ -1,0 +1,5 @@
+class VadGravityComputer
+!!!135428.java!!!	VadGravityComputer(inout ds : DependencySequence)
+        super(ds);
+!!!135556.java!!!	getArtfulnessValue() : double
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

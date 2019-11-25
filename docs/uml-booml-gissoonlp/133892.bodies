@@ -1,0 +1,13 @@
+class Config
+!!!137348.java!!!	Config()
+        this.textFileCorpora = new TextFileCorpora();
+        
+        TextFileCorpus textFileCorpus = new CmuMoviePlotCorpus();
+        this.textFileCorpora.addCorpus(textFileCorpus);
+!!!137476.java!!!	getInst() : Config
+        if (Config.inst == null) {
+            Config.inst = new Config();
+        }
+        return Config.inst;
+!!!137604.java!!!	getTextFileCorpora() : TextFileCorpora
+        return textFileCorpora;

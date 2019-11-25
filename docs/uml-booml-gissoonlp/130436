@@ -1,0 +1,116 @@
+format 222
+"simple" // nde::nlp::gissoo::dependency::simple
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/gissoo/dependency/simple/"
+  java_package "nde.nlp.gissoo.dependency.simple"
+  classview 129924 "simple"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 133764 "StochGradSeqEmbedDepArtfulness"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 133764 // dependencyTrajectoryToOptimalArtisticValue (<unidirectional association>)
+	relation 133764 --->
+	  a role_name "dependencyTrajectoryToOptimalArtisticValue" private
+	    comment "
+
+
+"
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 133764 // dependencyTrajectoryToOptimalArtisticValue (<unidirectional association>)
+	  b parent class_ref 130820 // DependencySequence
+      end
+
+      operation 137220 "getDependencyTrajectoryToOptimalArtisticValue"
+	public return_type class_ref 130820 // DependencySequence
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return 
+"
+      end
+    end
+  end
+
+  deploymentview 129924 "simple"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 133380 "StochGradSeqEmbedDepArtfulness"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.dependency.DependencySequence;
+${definition}"
+      associated_elems
+	class_ref 133764 // StochGradSeqEmbedDepArtfulness
+      end
+    end
+  end
+end

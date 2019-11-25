@@ -1,0 +1,270 @@
+format 222
+"artfulness" // nde::nlp::dependency::artfulness
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/dependency/artfulness/"
+  java_package "nde.nlp.dependency.artfulness"
+  classview 129412 "artfulness"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 131972 "ArtfullnessComputer"
+      abstract visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      attribute 130052 "artfulnessValue"
+	protected explicit_type "double"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      classrelation 131204 // ds (<unidirectional association>)
+	relation 131204 --->
+	  a role_name "ds" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 131204 // ds (<unidirectional association>)
+	  b parent class_ref 130820 // DependencySequence
+      end
+
+      operation 134276 "ArtfullnessComputer"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "ds" type class_ref 130820 // DependencySequence
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param ds 
+"
+      end
+    end
+
+    class 132100 "ArtfulnessComputerInterface"
+      abstract visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      operation 134404 "getArtfulnessValue"
+	abstract public explicit_return_type "double"
+	nparams 0
+	
+	java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 132228 "CompositArtfulnessComputer"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 131332 // <generalisation>
+	relation 131332 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 131332 // <generalisation>
+	  b parent class_ref 131972 // ArtfullnessComputer
+      end
+
+      classrelation 131460 // <realization>
+	relation 131460 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 131460 // <realization>
+	  b parent class_ref 132100 // ArtfulnessComputerInterface
+      end
+
+      classrelation 131588 // artfullnessComputers (<unidirectional association>)
+	relation 131588 --->
+	  stereotype "ArrayList"
+	  a role_name "artfullnessComputers" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 131588 // artfullnessComputers (<unidirectional association>)
+	  b parent class_ref 132100 // ArtfulnessComputerInterface
+      end
+
+      operation 134532 "CompositArtfulnessComputer"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "artfullnessComputers" explicit_type "ArrayList<ArtfulnessComputerInterface>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param artfullnessComputers
+"
+      end
+
+      operation 134660 "getArtfulnessValue"
+	public explicit_return_type "double"
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+	comment "
+@return
+"
+      end
+
+      operation 134788 "addArtfulnessComputer"
+	public explicit_return_type "void"
+	nparams 1
+	  param inout name "artfulnessComputer" type class_ref 132100 // ArtfulnessComputerInterface
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param artfulnessComputer
+"
+      end
+    end
+  end
+
+  deploymentview 129412 "artfulness"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 131844 "ArtfullnessComputer"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.dependency.DependencySequence;
+${definition}"
+      associated_elems
+	class_ref 131972 // ArtfullnessComputer
+      end
+    end
+
+    artifact 131972 "ArtfulnessComputerInterface"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 132100 // ArtfulnessComputerInterface
+      end
+    end
+
+    artifact 132100 "CompositArtfulnessComputer"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.dependency.DependencySequence;
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 132228 // CompositArtfulnessComputer
+      end
+    end
+  end
+
+  package_ref 129924 // index
+end

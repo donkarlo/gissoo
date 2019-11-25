@@ -1,0 +1,3 @@
+class VADSemanticVectorClass
+!!!142468.java!!!	VADSemanticVectorClass(inout vadSemanticVectors : ArrayList<VADSemanticVector>)
+        this.vadSemanticVectors = vadSemanticVectors;

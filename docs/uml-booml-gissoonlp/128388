@@ -1,0 +1,402 @@
+format 222
+"kb" // nde::kb
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/kb/"
+  java_package "nde.kb"
+  classview 128260 "kb"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 128260 "AvKbPieces"
+      visibility public stereotype "interface"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}interface ${name}${extends} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+    end
+
+    class 128388 "Kb"
+      abstract visibility public 
+      nformals 1
+      formal name "AvKBPs" type "" explicit_default_value ""
+        extends class_ref 128260 // AvKbPieces
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+@param <AvKBPieces>
+"
+      operation 128516 "getARandomKbPiece"
+	cpp_inline public return_type class_ref 128516 // KbPiece
+	nparams 1
+	  param inout name "aKB" type class_ref 128260 // AvKbPieces
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 128644 "getRandomKbPieces"
+	cpp_inline public return_type class_ref 128516 // KbPiece
+	nparams 2
+	  param in name "sampleSize" explicit_type "int"
+	  param inout name "aKB" type class_ref 128260 // AvKbPieces
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 128772 "getSimilarKbPiece"
+	cpp_inline public return_type class_ref 128516 // KbPiece
+	nparams 1
+	  param inout name "kbPiece" type class_ref 128516 // KbPiece
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 128516 "KbPiece"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+    end
+
+    class 128644 "KB_AV_ACCESS_TYPE"
+      visibility public stereotype "enum"
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}enum ${name}${implements} {
+${items};
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      attribute 128388 "FILE_PATH"
+	public type class_ref 128644 // KB_AV_ACCESS_TYPE
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128516 "INPUT"
+	public type class_ref 128644 // KB_AV_ACCESS_TYPE
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+
+      attribute 128644 "RDBMS"
+	public type class_ref 128644 // KB_AV_ACCESS_TYPE
+	cpp_decl ""
+	java_decl "  ${@}${name}${value},${comment}"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+      end
+    end
+
+    class 128772 "KbAccess"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 128004 // kb_av_access_type (<unidirectional association>)
+	relation 128004 --->
+	  a role_name "kb_av_access_type" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 128004 // kb_av_access_type (<unidirectional association>)
+	  b parent class_ref 128644 // KB_AV_ACCESS_TYPE
+      end
+
+      attribute 128772 "accessDetail"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment " file path string, json string of user and db pass"
+      end
+
+      attribute 128900 "accessDetailFormat"
+	protected explicit_type "String"
+	cpp_decl ""
+	java_decl "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	php_decl ""
+	python_decl ""
+	idl_decl ""
+	mysql_decl ""
+	MysqlColumn
+	comment " single file path? JSON?"
+      end
+    end
+
+    class 128900 "KbNestedPieces"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "Like corpus has chapters. Chapters have sections. section have paragraphs. paragraph has sentences sentences have words words have characters. 
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+    end
+
+    class 129028 "kbs"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author Mohammad Rahmani <mohammad.rahmani.xyz@gmail.com>
+"
+      classrelation 128132 // knowledgeBase (<unidirectional association>)
+	relation 128132 --->
+	  stereotype "ArrayList"
+	  a role_name "knowledgeBase" init_value " new ArrayList<>()" protected
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 128132 // knowledgeBase (<unidirectional association>)
+	  b parent class_ref 128388 // Kb
+      end
+
+      operation 128900 "add"
+	public return_type class_ref 129028 // kbs
+	nparams 1
+	  param inout name "kb" type class_ref 128388 // Kb
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 129028 "getKBs"
+	public return_type class_ref 128388 // Kb
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128260 "kb"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 128260 "AvKbPieces"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128260 // AvKbPieces
+      end
+    end
+
+    artifact 128388 "Kb"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 128388 // Kb
+      end
+    end
+
+    artifact 128516 "KB_AV_ACCESS_TYPE"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128644 // KB_AV_ACCESS_TYPE
+      end
+    end
+
+    artifact 128644 "KbAccess"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128772 // KbAccess
+      end
+    end
+
+    artifact 128772 "KbNestedPieces"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128900 // KbNestedPieces
+      end
+    end
+
+    artifact 128900 "KbPiece"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 128516 // KbPiece
+      end
+    end
+
+    artifact 129028 "kbs"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+${definition}"
+      associated_elems
+	class_ref 129028 // kbs
+      end
+    end
+  end
+end

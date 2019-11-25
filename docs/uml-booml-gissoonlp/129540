@@ -1,0 +1,151 @@
+format 222
+"ambiguity" // nde::nlp::dependency::ambiguity
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/dependency/ambiguity/"
+  java_package "nde.nlp.dependency.ambiguity"
+  classview 129156 "ambiguity"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 131332 "DpendencyAmbiguityRater"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 130180 // de (<unidirectional association>)
+	relation 130180 --->
+	  a role_name "de" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130180 // de (<unidirectional association>)
+	  b parent class_ref 131204 // DependencyVector
+      end
+
+      classrelation 130308 // ec (<unidirectional association>)
+	relation 130308 --->
+	  a role_name "ec" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${type} ${name}${value};
+"
+	    classrelation_ref 130308 // ec (<unidirectional association>)
+	  b parent class_ref 131460 // EmbeddingClustering
+      end
+
+      operation 133380 "DpendencyAmbiguityRater"
+	public explicit_return_type ""
+	nparams 2
+	  param inout name "de" type class_ref 131204 // DependencyVector
+	  param inout name "ec" type class_ref 131460 // EmbeddingClustering
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}, ${t1} ${p1}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 131460 "EmbeddingClustering"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+    end
+  end
+
+  deploymentview 129156 "ambiguity"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 131204 "DpendencyAmbiguityRater"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.dependency.svo.Dependency;
+import nde.nlp.dependency.DependencyVector;
+${definition}"
+      associated_elems
+	class_ref 131332 // DpendencyAmbiguityRater
+      end
+    end
+
+    artifact 131332 "EmbeddingClustering"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+${definition}"
+      associated_elems
+	class_ref 131460 // EmbeddingClustering
+      end
+      comment "A word embedding clustring meaning such as word2vec
+"
+    end
+  end
+end

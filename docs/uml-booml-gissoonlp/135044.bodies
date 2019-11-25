@@ -1,0 +1,3 @@
+class WordSemantic
+!!!140420.java!!!	WordSemantic(in word : String)
+        this.rawSemantic = word;

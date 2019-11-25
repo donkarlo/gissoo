@@ -1,0 +1,3 @@
+class DependencyVector
+!!!133252.java!!!	getVector(inout semantic : SemanticComposit) : Vector
+        return null;

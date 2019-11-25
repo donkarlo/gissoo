@@ -1,26 +1,12 @@
 # About Gissoo Application
- * The goal of this application is to generate short stories from hierarchical entities. By hierarchical, we mean entities are described to finer levels in a hierarchical structure such as JSON as follows:
-```
-    {
-       "man":{
-          "clothing":{
-             "overcoat":{
-                "color":"black"
-             }
-          },
-          "action":"smoking"
-       },
-       "time":"night",
-       "location":"city",
-       "vitrine neon light":{
-          "shape":"heart",
-          "status":"beating"
-       },
-       "clock tower":""
-    }
-```
-and the short story would prefereably take a literary format such as: 
-> The man in black outfit was smoking in a dark corner. He didn't realize, his cigarette's flickering light was the only beating heart of the night, with which the clock tower pendulum was beating.
+ * The goal of this application is to generate natural language with maximum artfulness indexes incorporated into them. In the very first stages it tries to output very short pieces of literary text, mostly close to poems. In further iterations, both the length and the number of artfulness indexes will be extended. 
+
+# Methodology
+ * This application tries to address the absence of a creative, artful text generation model by selecting dependency sequences derived from corpora such that the maximum artfulness is achieved through mathematically defining a set of artfulness indexes using stochastic gradient descent.
+ # Applied artfulness indexes
+  * Transition between antonym semantic vector classes
+  * Ambiguity appeal
+  * Valence, arousal and dominance(VAD) gravity of dependency sequences  
 
 # Dependencies, compilation and running (installation commands are for Debian-based OS)
  * Java 1.8+

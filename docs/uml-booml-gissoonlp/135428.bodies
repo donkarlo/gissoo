@@ -1,0 +1,4 @@
+class VectorSpaceBuilder
+!!!140676.java!!!	VectorSpaceBuilder(inout corpora : Corpora, inout embeddingStrgy : EmbeddingStrgyInterface)
+        this.corpora = corpora;
+        this.embeddingStrgy = embeddingStrgy;

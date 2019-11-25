@@ -1,0 +1,3 @@
+class StochGradSeqEmbedDepArtfulness
+!!!137220.java!!!	getDependencyTrajectoryToOptimalArtisticValue() : DependencySequence
+        return this.dependencyTrajectoryToOptimalArtisticValue;

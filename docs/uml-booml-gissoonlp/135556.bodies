@@ -1,0 +1,5 @@
+class WordbasedAntonymClassifiedVectorSpace
+!!!141060.java!!!	WordbasedAntonymClassifiedVectorSpace(inout semanticClasses : ArrayList<SemanticVectorClass>)
+        super(semanticClasses);
+!!!141188.java!!!	getNewClassAfterASemanticVectorCompositStep(inout semanticVector : SemanticCompositVector) : SemanticVectorClass
+        return null;

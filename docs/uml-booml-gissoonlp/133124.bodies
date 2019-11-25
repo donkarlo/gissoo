@@ -1,0 +1,4 @@
+class SemanticCompositVector
+!!!135812.java!!!	SemanticCompositVector(inout semanticComposit : SemanticComposit, inout vector : Vector)
+        this.semanticComposit = semanticComposit;
+        this.vector = vector;

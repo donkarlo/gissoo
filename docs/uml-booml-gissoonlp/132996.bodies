@@ -1,0 +1,3 @@
+class SemanticCompositVector
+!!!135940.java!!!	SemanticCompositVector(inout semanticComposit : SemanticComposit, inout vector : Vector)
+        super(semanticComposit, vector);

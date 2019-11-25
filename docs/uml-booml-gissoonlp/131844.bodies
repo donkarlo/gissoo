@@ -1,0 +1,6 @@
+class SequenceAntonymRaterStructure
+!!!134148.java!!!	SequenceAntonymRaterStructure(inout ds1 : Dependency, inout ds2 : Dependency, in antonymRate : double, in distance : int)
+        this.ds1 = ds1;
+        this.ds2 = ds2;
+        this.antonymRate = antonymRate;
+        this.distance = distance;

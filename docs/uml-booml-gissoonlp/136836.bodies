@@ -1,0 +1,6 @@
+class VADSemanticVector
+!!!142340.java!!!	VADSemanticVector(inout semanticVector : SemanticComposit, inout vector : Vector, in valence : double, in arousal : double, in dominance : double)
+        super(semanticVector, vector);
+        this.valence = valence;
+        this.arousal = arousal;
+        this.dominance = dominance;

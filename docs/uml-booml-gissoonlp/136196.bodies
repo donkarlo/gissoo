@@ -1,0 +1,3 @@
+class WordbasedAntonymClusterer
+!!!141828.java!!!	getClasses() : SemanticVectorClass
+        return null;

@@ -1,0 +1,5 @@
+class ClassifiedWord2Vec
+!!!142596.java!!!	ClassifiedWord2Vec(inout semanticClasses : ArrayList<SemanticVectorClass>)
+        super(semanticClasses);
+!!!142724.java!!!	getNewClassAfterASemanticVectorCompositStep(inout semanticVector : SemanticCompositVector) : SemanticVectorClass
+        return null;

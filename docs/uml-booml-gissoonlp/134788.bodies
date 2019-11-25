@@ -1,0 +1,5 @@
+class Sentences
+!!!139780.java!!!	Sentences(inout sentences : ArrayList<Sentence>)
+        this.sentences = sentences;
+!!!139908.java!!!	smallestMeaningfulPartContainingWord(in word : String) : ArrayList<String>
+        return null;

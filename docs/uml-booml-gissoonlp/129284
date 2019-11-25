@@ -1,0 +1,354 @@
+format 222
+"dependency" // nde::nlp::dependency
+  revision 1
+  modified_by 4 "donkarlo"
+  // class settings
+  
+  classdiagramsettings member_max_width 0 end
+  
+  classcompositediagramsettings end
+  
+  usecasediagramsettings end
+  
+  sequencediagramsettings end
+  
+  collaborationdiagramsettings end
+  
+  objectdiagramsettings end
+  
+  objectcompositediagramsettings end
+  
+  componentdiagramsettings
+   end
+  
+  deploymentdiagramsettings
+   end
+  
+  statediagramsettings
+   end
+  
+  activitydiagramsettings
+   end
+  
+  java_dir "/media/donkarlo/Elements/projs/research/nlp/nlg/story/gissoo/src/main/java/nde/nlp/dependency/"
+  java_package "nde.nlp.dependency"
+  classview 128900 "dependency"
+    
+    classdiagramsettings member_max_width 0 end
+    
+    classcompositediagramsettings end
+    
+    collaborationdiagramsettings end
+    
+    objectdiagramsettings end
+    
+    objectcompositediagramsettings end
+    
+    sequencediagramsettings end
+    
+    statediagramsettings
+     end
+    
+    
+    activitydiagramsettings
+     end
+    class 130180 "Dependency"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 129540 // <generalisation>
+	relation 129540 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129540 // <generalisation>
+	  b parent class_ref 130308 // SemanticComposit
+      end
+    end
+
+    class 130692 "DependencyBank"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      operation 132356 "DependencyBank"
+	public explicit_return_type ""
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132484 "getRandomDependency"
+	public return_type class_ref 130180 // Dependency
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@return 
+"
+      end
+    end
+
+    class 130820 "DependencySequence"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 129668 // <generalisation>
+	relation 129668 ---|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129668 // <generalisation>
+	  b parent class_ref 130308 // SemanticComposit
+      end
+
+      classrelation 129796 // dependencies (<unidirectional association>)
+	relation 129796 --->
+	  stereotype "ArrayList"
+	  a role_name "dependencies" private
+	    java "  ${comment}${@}${visibility}${static}${final}${transient}${volatile}${stereotype}<${type}> ${name}${value};
+"
+	    classrelation_ref 129796 // dependencies (<unidirectional association>)
+	  b parent class_ref 130180 // Dependency
+      end
+
+      operation 132612 "DependencySequence"
+	public explicit_return_type ""
+	nparams 1
+	  param inout name "dependencies" explicit_type "ArrayList<Dependency>"
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${synchronized}${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+
+      operation 132740 "addDependency"
+	public return_type class_ref 130820 // DependencySequence
+	nparams 1
+	  param inout name "d" type class_ref 130180 // Dependency
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+	comment "
+@param d
+@return 
+"
+      end
+
+      operation 132868 "getDependencies"
+	public return_type class_ref 130180 // Dependency
+	nparams 0
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}ArrayList<${type}> ${name}${(}${)}${throws}${staticnl}{
+  ${body}}
+"
+	
+	
+	
+      end
+    end
+
+    class 130948 "DependencySequenceEmbedding"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 129924 // <realization>
+	relation 129924 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 129924 // <realization>
+	  b parent class_ref 131076 // EmbeddingStrgyInterface
+      end
+
+      operation 133124 "getVector"
+	public return_type class_ref 129156 // Vector
+	nparams 1
+	  param inout name "semantic" type class_ref 130308 // SemanticComposit
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+
+    class 131204 "DependencyVector"
+      visibility public 
+      cpp_decl ""
+      java_decl "${comment}${@}${visibility}${static}${final}${abstract}class ${name}${extends}${implements} {
+${members}}
+"
+      php_decl ""
+      python_2_2 python_decl ""
+      idl_decl ""
+      explicit_switch_type ""
+      mysql_decl ""
+      
+      comment "
+@author donkarlo
+"
+      classrelation 130052 // <realization>
+	relation 130052 -_-|>
+	  a public
+	    java "${type}"
+	    classrelation_ref 130052 // <realization>
+	  b parent class_ref 131076 // EmbeddingStrgyInterface
+      end
+
+      operation 133252 "getVector"
+	public return_type class_ref 129156 // Vector
+	nparams 1
+	  param inout name "semantic" type class_ref 130308 // SemanticComposit
+	
+	preserve_java_body_indent java_def "  ${comment}${@}${visibility}${final}${static}${abstract}${synchronized}${type} ${name}${(}${t0} ${p0}${)}${throws}${staticnl}{
+  ${body}}
+"
+	java_annotation "@Override
+"
+	
+	
+	
+      end
+    end
+  end
+
+  deploymentview 128900 "dependency"
+    //deployment diagram settings
+    deploymentdiagramsettings
+     end
+    artifact 130436 "Dependency"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.semantic.SemanticComposit;
+${definition}"
+      associated_elems
+	class_ref 130180 // Dependency
+      end
+    end
+
+    artifact 130564 "DependencyBank"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.dependency.svo.Dependency;
+${definition}"
+      associated_elems
+	class_ref 130692 // DependencyBank
+      end
+    end
+
+    artifact 130692 "DependencySequence"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import java.util.ArrayList;
+import nde.nlp.semantic.SemanticComposit;
+${definition}"
+      associated_elems
+	class_ref 130820 // DependencySequence
+      end
+    end
+
+    artifact 130948 "DependencySequenceEmbedding"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.semantic.SemanticComposit;
+import nde.nlp.semantic.vector.EmbeddingStrgyInterface;
+import nde.math.linalg.Vector;
+${definition}"
+      associated_elems
+	class_ref 130948 // DependencySequenceEmbedding
+      end
+    end
+
+    artifact 131076 "DependencyVector"
+      stereotype "source"
+      java_src "${comment}
+${package}
+${imports}
+import nde.nlp.semantic.SemanticComposit;
+import nde.nlp.semantic.vector.EmbeddingStrgyInterface;
+import nde.math.linalg.Vector;
+${definition}"
+      associated_elems
+	class_ref 131204 // DependencyVector
+      end
+    end
+  end
+
+  package_ref 129540 // ambiguity
+
+  package_ref 129668 // antonym
+
+  package_ref 129796 // artfulness
+
+  package_ref 130052 // svo
+end

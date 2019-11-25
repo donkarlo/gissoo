@@ -1,0 +1,29 @@
+window_sizes 1200 679 300 894 506 120
+cleanlooks_style
+diagrams
+  active  classdiagram_ref 128004 // genClassDigram
+    715 404 100 A1 1044 0
+end
+show_stereotypes
+selected class_ref 137092 // Clusterer
+open
+  
+  package_ref 128388 // kb
+  classview_ref 128644 // corpus
+  classview_ref 128772 // semantic
+  classview_ref 129028 // vector
+  classview_ref 130308 // classified
+  classview_ref 130436 // vad
+  classview_ref 130564 // word2vec
+  classview_ref 128900 // dependency
+  classview_ref 129156 // ambiguity
+  classview_ref 129284 // antonym
+  deploymentview_ref 129284 // antonym
+  classview_ref 129412 // artfulness
+  deploymentview_ref 129412 // artfulness
+  classview_ref 129540 // index
+  classview_ref 129924 // simple
+  deploymentview_ref 129924 // simple
+  classview_ref 130692 // genClassView
+end
+end

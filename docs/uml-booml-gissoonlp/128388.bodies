@@ -1,0 +1,7 @@
+class Kb
+!!!128516.java!!!	getARandomKbPiece(inout aKB : AvKbPieces) : KbPiece
+        return null;
+!!!128644.java!!!	getRandomKbPieces(in sampleSize : int, inout aKB : AvKbPieces) : KbPiece
+        return null;
+!!!128772.java!!!	getSimilarKbPiece(inout kbPiece : KbPiece) : KbPiece
+        return null;

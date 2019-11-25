@@ -1,0 +1,3 @@
+class Clusterer
+!!!142852.java!!!	getClasses() : SemanticVectorClass
+        return null;
