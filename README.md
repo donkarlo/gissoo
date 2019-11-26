@@ -26,16 +26,3 @@
     $ mvn clean package
     $ java -cp target/gissoo-0.1-rise.jar com.nlp.gissoo.Main
  ```
-
-# Corpora
- * A corpus of movie plots from Wikipedia which is formed of 42,306 movie plot summaries. You may check it directly from 
-```
-    https://github.com/donkarlo/gissoo/blob/master/data/corpora/cmu-movie-summary-corpus-plot-summaries.txt
-```
-or for further information and other download options, you can take a loot at 
-```
-    http://www.cs.cmu.edu/~ark/personas/
-```
-
-# Todo
- * Evaluations

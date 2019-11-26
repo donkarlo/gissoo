@@ -3,3 +3,6 @@
 /target/
 /test/
 /test/uml-booml-gissoonlp
+nbactions.xml
+nb-configuration.xml
+hs_err_pid25534.log

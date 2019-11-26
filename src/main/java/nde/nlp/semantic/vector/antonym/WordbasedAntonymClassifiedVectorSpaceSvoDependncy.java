@@ -28,7 +28,13 @@ public class WordbasedAntonymClassifiedVectorSpaceSvoDependncy extends Classifie
         return null;
     }
     
-    public SemanticVectorClass getNewClassAfterASemanticCompositStep(SemanticVectorClass semanticVectorClass, nde.nlp.dependency.svo.SemanticCompositVector svoDependencyVector) {
+    /**
+     * 
+     * @param currentSemanticVectorClass
+     * @param svoDependencyVector
+     * @return 
+     */
+    public SemanticVectorClass getNewClassAfterASemanticCompositStep(SemanticVectorClass currentSemanticVectorClass, nde.nlp.dependency.svo.SemanticCompositVector svoDependencyVector) {
         return null;
     }
 }

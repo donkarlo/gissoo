@@ -1,8 +1,5 @@
 package nde.nlp.dependency.svo;
-
-import nde.nlp.semantic.SemanticUnit;
 import nde.nlp.semantic.Entity;
-import nde.nlp.semantic.SemanticComposit;
 
 /**
  *

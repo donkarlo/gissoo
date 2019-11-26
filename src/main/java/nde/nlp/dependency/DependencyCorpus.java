@@ -6,12 +6,12 @@ import nde.nlp.dependency.svo.Dependency;
  *
  * @author donkarlo
  */
-public class DependencyBank {
+public class DependencyCorpus {
 
     /**
      * 
      */
-    public DependencyBank() {
+    public DependencyCorpus() {
     }
 
     /**
