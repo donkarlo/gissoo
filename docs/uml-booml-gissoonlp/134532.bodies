@@ -1,3 +1,0 @@
-class Entities
-!!!138628.java!!!	getLength() : int
-        return entities.size();

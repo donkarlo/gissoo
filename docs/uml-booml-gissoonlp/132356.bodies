@@ -1,5 +1,0 @@
-class AmbiguityComputer
-!!!134916.java!!!	AmbiguityComputer(inout ds : DependencySequence)
-        super(ds);
-!!!135044.java!!!	getArtfulnessValue() : double
-        return 0;

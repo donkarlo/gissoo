@@ -1,5 +1,0 @@
-class AntonymComputer
-!!!135172.java!!!	AntonymComputer(inout ds : DependencySequence)
-        super(ds);
-!!!135300.java!!!	getArtfulnessValue() : double
-        return 0;

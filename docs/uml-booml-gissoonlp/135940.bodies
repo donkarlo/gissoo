@@ -1,3 +1,0 @@
-class SemanticVectorClass
-!!!141956.java!!!	SemanticVectorClass(inout semanticCompositVectors : ArrayList<SemanticCompositVector>)
-        this.semanticCompositVectors = semanticCompositVectors;

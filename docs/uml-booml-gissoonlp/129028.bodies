@@ -1,6 +1,0 @@
-class kbs
-!!!128900.java!!!	add(inout kb : Kb) : kbs
-        this.knowledgeBase.add(kb);
-        return this;
-!!!129028.java!!!	getKBs() : Kb
-        return knowledgeBase;

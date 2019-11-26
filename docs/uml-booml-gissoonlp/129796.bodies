@@ -1,3 +1,0 @@
-class HumanSentence
-!!!139652.java!!!	HumanSentence(in stringSentence : String)
-        super(stringSentence);

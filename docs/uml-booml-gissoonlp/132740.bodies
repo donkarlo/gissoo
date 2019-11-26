@@ -1,5 +1,0 @@
-class Dependency
-!!!135684.java!!!	Dependency(inout subj : Entity, in verb : String, inout obj : Entity)
-        this.subj = subj;
-        this.verb = verb;
-        this.obj = obj;

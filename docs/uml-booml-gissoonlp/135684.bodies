@@ -1,3 +1,0 @@
-class ClassifiedVectorSpace
-!!!140932.java!!!	ClassifiedVectorSpace(inout semanticVectorClasses : ArrayList<SemanticVectorClass>)
-        this.semanticVectorClasses = semanticVectorClasses;

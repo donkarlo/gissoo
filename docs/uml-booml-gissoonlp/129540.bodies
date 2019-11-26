@@ -1,9 +1,0 @@
-class Corpora
-!!!129412.java!!!	Corpora(inout corpusArray : ArrayList<Corpus>)
-        this.corpusArray = corpusArray;
-!!!129540.java!!!	addCorpus(inout corpus : Corpus) : void
-        this.corpusArray.add(corpus);
-!!!129668.java!!!	getCorpusArray() : Corpus
-        return this.corpusArray;
-!!!129796.java!!!	getRandomHumanSentences(in num : int, in avrLen : int) : HumanSentence
-        return null;

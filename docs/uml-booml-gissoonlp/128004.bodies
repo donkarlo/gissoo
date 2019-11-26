@@ -1,4 +1,0 @@
-class ConfigUnit
-!!!128004.java!!!	ConfigUnit(in id : String, in value : String)
-        this.id = id;
-        this.value = value;

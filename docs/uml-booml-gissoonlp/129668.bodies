@@ -1,9 +1,0 @@
-class Corpus
-!!!130180.java!!!	Corpus(inout accessType : KB_AV_ACCESS_TYPE, in accessDetail : String)
-
-        this.accessType = accessType;
-        this.accessDetail = accessDetail;
-!!!130308.java!!!	getAccessType() : KB_AV_ACCESS_TYPE
-        return accessType;
-!!!130436.java!!!	getAccessDetail() : String
-        return accessDetail;

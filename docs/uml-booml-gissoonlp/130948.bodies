@@ -1,3 +1,0 @@
-class DependencySequenceEmbedding
-!!!133124.java!!!	getVector(inout semantic : SemanticComposit) : Vector
-        return null;

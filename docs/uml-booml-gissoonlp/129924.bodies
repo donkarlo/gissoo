@@ -1,9 +1,0 @@
-class TextFileCorpora
-!!!130692.java!!!	TextFileCorpora(inout corpusArray : ArrayList<TextFileCorpus>)
-        this.corpusArray = corpusArray;
-!!!130820.java!!!	addCorpus(inout corpus : TextFileCorpus) : void
-        this.corpusArray.add(corpus);
-!!!130948.java!!!	getCorpusArray() : TextFileCorpus
-        return this.corpusArray;
-!!!131076.java!!!	getRandomHumanSentences(in num : int, in avrLen : int) : HumanSentence
-        return null;

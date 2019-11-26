@@ -1,8 +1,0 @@
-class DependencySequence
-!!!132612.java!!!	DependencySequence(inout dependencies : ArrayList<Dependency>)
-        this.dependencies = dependencies;
-!!!132740.java!!!	addDependency(inout d : Dependency) : DependencySequence
-        this.dependencies.add(d);
-        return this;
-!!!132868.java!!!	getDependencies() : Dependency
-        return dependencies;

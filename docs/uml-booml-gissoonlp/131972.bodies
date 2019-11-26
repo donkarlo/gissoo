@@ -1,3 +1,0 @@
-class ArtfullnessComputer
-!!!134276.java!!!	ArtfullnessComputer(inout ds : DependencySequence)
-        this.ds = ds;

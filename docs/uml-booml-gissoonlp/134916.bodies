@@ -1,8 +1,0 @@
-class SimpleSentence
-!!!140164.java!!!	SimpleSentence(in subject : String, in verb : String)
-        this.subject = subject;
-        this.verb = verb;
-!!!140292.java!!!	SimpleSentence(in subject : String, in verb : String, in object : String)
-        this.subject = subject;
-        this.verb = verb;
-        this.object = object;

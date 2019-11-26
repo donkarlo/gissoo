@@ -1,6 +1,0 @@
-class DependencyPairAntonymRater
-!!!133508.java!!!	DependencyPairAntonymRater(inout depedncy1 : Dependency, inout depedncy2 : Dependency)
-        this.depedncy1 = depedncy1;
-        this.depedncy2 = depedncy2;
-!!!133636.java!!!	getAntonymRate() : double
-        return 0;
