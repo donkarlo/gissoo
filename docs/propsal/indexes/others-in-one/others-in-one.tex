@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{comment}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage[round]{natbib}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\DeclareMathOperator*{\argmax}{argmax}
+\pagenumbering{arabic}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Mohammad Rahmani}
+\lhead{Literary text generation by artful indexes}
+
+\newcommand{\ignore}[1]{}
+\begin{document}
+	\bibliographystyle{plainnat}
+	\title{Literary text generation by artful indexes}
+	\author{Mohammad Rahmani}
+	\date{}
+	\maketitle
+		
+		\section{Introduction} \label{sec:introduction}
+		This document includes the candidate artistic indexes and their advantages and disadvantages to be potentially included in the main proposal.
+		\section{Artistic indexes} \label{sec:artistic-indexes}
+		This document tries to introduce several aesthetic aspects of textual narratives and potential, computational methods of recognizing, generating or evaluating them. 
+			
+			\subsection{Nostalgia} 
+			In a semantic vector space, the rate of nostalgia introduced by a piece of text can be measured by the number of lexicons which are not explicitly mentioned in the text but are placed in a close neighborhood of the words which are already mentioned. This will implicitly remind the reader of unmentioned entities which provokes nostalgia. As such, semantic vector space tailor to previous knowledge of the reader must be formed. Such as forming it upon the literary texts he has already read. That is, if $n_p$ and $n_q$ are pieces of text of the same length, then the one which passes trough a denser space of words in a semantic vector space is more nostalgic and eventually a more artful text.
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item Maybe, the only index upon which, a reader evaluate the artistic quality of a text.
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item Not genuine in the sense that that it recreates/reminds it is based upon the already experienced sensations. 
+						\item Similar to metaphor or its cheaper brother simile    
+					\end{itemize}
+			\subsection{Adjectives and adverbs}
+			\citet{vecchi-2016-spicy-adjectives-and-nominal-donkeys-capturing-semantic-deviance-using-compositionality-in-distributional-spaces} focus on novel adjective in noun-phrases. They show that the extent to which an adjective alters the distributional representation of a noun it modifies is the most significant factor in determining the acceptability of the phrase.
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item Boosting emotional arousal in the audience. 
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item A good movie without a soundtrack must still be a good movie.    
+					\end{itemize}
+			\subsection{Suspense}
+			Suspense deals with keeping the audience(reader) worried about what is going to happen next. \citet{oneill-2011-toward-a-computational-framework-of-suspense-and-dramatic-arc} presents a suspense detection system based on the correlation between perceived likelihood of a protagonist’s failure and the amount of suspense reported by the audience.
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item Keeps the audience continually engaged with the course of the events by inducing anxiety.  
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item Are we planning to abuse negative feeling arousal of the audience ?  
+					\end{itemize}
+			\subsection{Metaphors}\label{sec:metaphor}
+			Metaphor bases one of the main columns of literature. As such, the more a piece of text contains metaphors, the more artful it appears.  \citet{mao-2018-word-embedding-and-wordnet-based-metaphor-identification-and-interpretation} suggests a method to identify metaphors applied in a text.    
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item We all live in metaphorical environment created by the artists. 
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item Based on already seen patterns, so repetitive.   
+					\end{itemize}
+			\subsection{Lexical choice} 
+			Some lexical choices seem to be more aesthetic than others such as "vanish" versus "disappear" in a sentence such as "The baby vanishes into the cave" (This sentence is a causal output of the model suggested by \citet{mcintyre-2009-learning-to-tell-tales-a-data-driven-approach-to-story-generation}). It seems that the less frequent the synonym of a word is used, the more aesthetic it appears. 
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item Engages mind with discovering and imagining the meaning of the less used words.  
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item Are we abusing audience ignorance?
+					\end{itemize}
+			\subsection{Creativity}
+				Creativity is the matter of being novel and unexpected. In recent years several methods have been developed to measure the amount of creativity introduced in a new product. For example, \citet{jordanous-2012-a-standardised-procedure-for-evaluating-creative-systems-computational-creativity-evaluation-based-on-what-it-is-to-be-creative} introduces 14 components of creativity. Novelty can take many forms. One such form might appear in sentences such as "The baby vanishes into the cave". There is a perception that most of grammatically correct but semantically rare phrases can be considered artful. The reason might be the efforts the imagination has to make to establish natural relations between constituents of such bizarre phrases.
+				\paragraph{Advantages}
+					\begin{itemize}
+						\item Offers a sense of novelty and unexpectedness to an artifact.  
+					\end{itemize}
+				\paragraph{Disadvantages}
+					\begin{itemize}
+						\item Contradicts with nostalgia, metaphors etc
+						\item its excessive application may result in anarchism 
+					\end{itemize}
+	
+	
+	\bibliography{/media/donkarlo/Elements/projs/research/refs}
+\end{document}
